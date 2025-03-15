@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- SImple use -->
+    <c-flashcard clickable>
+        <c-flashcard-front>Hello, World!</c-flashcard-front>
+        <c-flashcard-back>Olá, Mundo</c-flashcard-back>
+    </c-flashcard>
+
+    <!-- Starts flipped -->
+    <c-flashcard clickable flipped>
+        <c-flashcard-front>Hello, World!</c-flashcard-front>
+        <c-flashcard-back>Olá, Mundo</c-flashcard-back>
+    </c-flashcard>
+
+    <!-- Animated -->
+    <c-flashcard clickable class="animated">
+        <c-flashcard-front>Hello, World!</c-flashcard-front>
+        <c-flashcard-back>Olá, Mundo</c-flashcard-back>
+    </c-flashcard>
+
+    <!-- Not Clicable -->
+    <c-flashcard style="cursor: initial;">
+        <c-flashcard-front>Hello, World!</c-flashcard-front>
+        <c-flashcard-back>Olá, Mundo</c-flashcard-back>
+    </c-flashcard>
+
+    <script src="main.js"></script>
+
+<style>
+    body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+        background-color: rgb(59, 59, 59);
+    }
+
+    c-flashcard {
+        width: 150px;
+        height: 200px;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    c-flashcard-front {
+        background-color: white;
+    }
+    
+    c-flashcard-back {
+        background-color: rgb(179, 179, 179);
+    }
+
+    .animated {
+        perspective: 1000px;
+        transition: transform 1s;
+    }
+</style>
+
+</body>
+</html>

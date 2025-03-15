@@ -1,0 +1,24 @@
+c-flashcard {
+    display: block;
+    position: relative;
+}
+
+c-flashcard-front,
+c-flashcard-back {
+    all: inherit;
+    position: absolute;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+c-flashcard-back {
+    transform: rotateY(-180deg);
+}
+
+c-flashcard[flipped] c-flashcard-front {
+    transform: rotateY(180deg);
+}
+
+c-flashcard[flipped] c-flashcard-back {
+    transform: rotateY(0deg);
+}
