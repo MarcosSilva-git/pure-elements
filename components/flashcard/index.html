@@ -6,26 +6,26 @@
 
     <!-- SImple use -->
     <c-flashcard clickable>
-        <c-flashcard-front>Hello, World!</c-flashcard-front>
-        <c-flashcard-back>Olá, Mundo</c-flashcard-back>
+        <c-flashcard-front>SImple use</c-flashcard-front>
+        <c-flashcard-back>Back</c-flashcard-back>
     </c-flashcard>
 
     <!-- Starts flipped -->
     <c-flashcard clickable flipped>
-        <c-flashcard-front>Hello, World!</c-flashcard-front>
-        <c-flashcard-back>Olá, Mundo</c-flashcard-back>
+        <c-flashcard-front>Starts flipped</c-flashcard-front>
+        <c-flashcard-back>Back</c-flashcard-back>
     </c-flashcard>
 
-    <!-- Animated -->
-    <c-flashcard clickable class="animated">
-        <c-flashcard-front>Hello, World!</c-flashcard-front>
-        <c-flashcard-back>Olá, Mundo</c-flashcard-back>
+    <!-- Animatated -->
+    <c-flashcard clickable rotate class="animated">
+        <c-flashcard-front>Rotate Right</c-flashcard-front>
+        <c-flashcard-back>Back</c-flashcard-back>
     </c-flashcard>
 
     <!-- Not Clicable -->
     <c-flashcard style="cursor: initial;">
-        <c-flashcard-front>Hello, World!</c-flashcard-front>
-        <c-flashcard-back>Olá, Mundo</c-flashcard-back>
+        <c-flashcard-front>Not Clicable</c-flashcard-front>
+        <c-flashcard-back>Back</c-flashcard-back>
     </c-flashcard>
 
     <script src="main.js"></script>
@@ -40,6 +40,7 @@
         align-items: center;
         gap: 5rem;
         background-color: rgb(59, 59, 59);
+        flex-wrap: wrap;
     }
 
     c-flashcard {

@@ -1,6 +1,14 @@
 c-flashcard {
+    --front-rotate-angle: 180deg;
+    --back-rotate-angle: -180deg;
+
     display: block;
     position: relative;
+}
+
+c-flashcard[rotate="right"] {
+    --front-rotate-angle: -180deg;
+    --back-rotate-angle: 180deg;
 }
 
 c-flashcard-front,
@@ -8,17 +16,34 @@ c-flashcard-back {
     all: inherit;
     position: absolute;
     backface-visibility: hidden;
-    perspective: 1000px;
 }
 
-c-flashcard-back {
-    transform: rotateY(-180deg);
+
+
+/* if just can flip and cannot rotate */
+c-flashcard:not([rotate]) c-flashcard-back {
+    display: none;
 }
 
-c-flashcard[flipped] c-flashcard-front {
-    transform: rotateY(180deg);
+c-flashcard[flipped]:not([rotate]) c-flashcard-front {
+    display: none;
 }
 
-c-flashcard[flipped] c-flashcard-back {
+c-flashcard[flipped]:not([rotate]) c-flashcard-back {
+    display: inherit;
+}
+
+
+
+/* if can rotate */
+c-flashcard[rotate] c-flashcard-back {
+    transform: rotateY(var(--back-rotate-angle));
+}
+
+c-flashcard[rotate][flipped] c-flashcard-back {
     transform: rotateY(0deg);
+}
+
+c-flashcard[rotate][flipped] c-flashcard-front {
+    transform: rotateY(var(--front-rotate-angle));
 }
