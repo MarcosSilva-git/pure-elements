@@ -10,7 +10,7 @@ c-flashcard-back {
     backface-visibility: hidden;
 }
 
-c-flashcard:not([rotate]) {
+c-flashcard:not([rotate]):not([no-effect]) {
     c-flashcard-back {
         display: none;
     }
@@ -25,7 +25,7 @@ c-flashcard:not([rotate]) {
 }
 
 
-c-flashcard[rotate] {
+c-flashcard[rotate]:not([no-effect]) {
     --front-rotate-y: 0;
     --front-rotate-x: 0;
 
