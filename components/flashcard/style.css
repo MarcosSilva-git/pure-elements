@@ -24,7 +24,6 @@ pe-flashcard:not([rotate]):not([no-effect]) {
     }
 }
 
-
 pe-flashcard[rotate]:not([no-effect]) {
     --front-rotate-y: 0;
     --front-rotate-x: 0;

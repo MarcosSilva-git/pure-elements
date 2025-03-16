@@ -11,8 +11,7 @@
             justify-content: space-around;
             align-items: center;
             flex-wrap: wrap;
-            /* background-color: rgb(59, 59, 59); */
-            background-color: red;
+            background-color: rgb(59, 59, 59);
         }
 
         pe-flashcard {
@@ -42,7 +41,7 @@
 <body>
     <main>
         <!-- SImple use -->
-        <pe-flashcard clickable class="animated">
+        <pe-flashcard clickable>
             <pe-flashcard-front>SImple use</pe-flashcard-front>
             <pe-flashcard-back>Back</pe-flashcard-back>
         </pe-flashcard>
@@ -50,6 +49,12 @@
         <!-- Starts flipped -->
         <pe-flashcard clickable flipped>
             <pe-flashcard-front>Starts flipped</pe-flashcard-front>
+            <pe-flashcard-back>Back</pe-flashcard-back>
+        </pe-flashcard>
+
+        <!-- Animated -->
+        <pe-flashcard clickable class="animated">
+            <pe-flashcard-front>Animated</pe-flashcard-front>
             <pe-flashcard-back>Back</pe-flashcard-back>
         </pe-flashcard>
 
