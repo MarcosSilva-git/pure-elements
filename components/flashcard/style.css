@@ -1,31 +1,31 @@
-c-flashcard {
+pe-flashcard {
     display: block;
     position: relative;
 }
 
-c-flashcard-front,
-c-flashcard-back {
+pe-flashcard-front,
+pe-flashcard-back {
     all: inherit;
     position: absolute;
     backface-visibility: hidden;
 }
 
-c-flashcard:not([rotate]):not([no-effect]) {
-    c-flashcard-back {
+pe-flashcard:not([rotate]):not([no-effect]) {
+    pe-flashcard-back {
         display: none;
     }
     
-    &[flipped] c-flashcard-front {
+    &[flipped] pe-flashcard-front {
         display: none;
     }
     
-    &[flipped] c-flashcard-back {
+    &[flipped] pe-flashcard-back {
         display: inherit;
     }
 }
 
 
-c-flashcard[rotate]:not([no-effect]) {
+pe-flashcard[rotate]:not([no-effect]) {
     --front-rotate-y: 0;
     --front-rotate-x: 0;
 
@@ -53,15 +53,15 @@ c-flashcard[rotate]:not([no-effect]) {
         --back-rotate-x: -.5turn;
     }
 
-    c-flashcard-back {
+    pe-flashcard-back {
         transform: rotateX(var(--back-rotate-x)) rotateY(var(--back-rotate-y));
     }
     
-    &[flipped] c-flashcard-back {
+    &[flipped] pe-flashcard-back {
         transform: rotateX(0) rotateY(0);
     }
     
-    &[flipped] c-flashcard-front {
+    &[flipped] pe-flashcard-front {
         transform: rotateX(var(--front-rotate-x)) rotateY(var(--front-rotate-y));
     }
 }

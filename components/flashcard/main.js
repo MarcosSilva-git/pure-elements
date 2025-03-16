@@ -12,7 +12,7 @@
 // }
 
 document.addEventListener("click", event => {
-    const card = event.target.closest('c-flashcard')
+    const card = event.target.closest('pe-flashcard')
 
     if (card && card.hasAttribute("clickable")) {
         c_flashcard_toggle(card)

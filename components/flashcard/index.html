@@ -14,7 +14,7 @@
             background-color: rgb(59, 59, 59);
         }
 
-        c-flashcard {
+        pe-flashcard {
             width: 150px;
             height: 200px;
             border-radius: 1rem;
@@ -24,11 +24,11 @@
             cursor: pointer;
         }
         
-        c-flashcard-front {
+        pe-flashcard-front {
             background-color: white;
         }
         
-        c-flashcard-back {
+        pe-flashcard-back {
             background-color: #b3b3b3;
         }
 
@@ -41,47 +41,47 @@
 <body>
     <main>
         <!-- SImple use -->
-        <c-flashcard clickable>
-            <c-flashcard-front>SImple use</c-flashcard-front>
-            <c-flashcard-back>Back</c-flashcard-back>
-        </c-flashcard>
+        <pe-flashcard clickable>
+            <pe-flashcard-front>SImple use</pe-flashcard-front>
+            <pe-flashcard-back>Back</pe-flashcard-back>
+        </pe-flashcard>
 
         <!-- Starts flipped -->
-        <c-flashcard clickable flipped>
-            <c-flashcard-front>Starts flipped</c-flashcard-front>
-            <c-flashcard-back>Back</c-flashcard-back>
-        </c-flashcard>
+        <pe-flashcard clickable flipped>
+            <pe-flashcard-front>Starts flipped</pe-flashcard-front>
+            <pe-flashcard-back>Back</pe-flashcard-back>
+        </pe-flashcard>
 
         
         <!-- Not Clicable -->
-        <c-flashcard style="cursor: initial;">
-            <c-flashcard-front>Not Clicable</c-flashcard-front>
-            <c-flashcard-back>Back</c-flashcard-back>
-        </c-flashcard>
+        <pe-flashcard style="cursor: initial;">
+            <pe-flashcard-front>Not Clicable</pe-flashcard-front>
+            <pe-flashcard-back>Back</pe-flashcard-back>
+        </pe-flashcard>
 
         <!-- Rotate Left -->
-        <c-flashcard clickable rotate class="animated">
-            <c-flashcard-front>left</c-flashcard-front>
-            <c-flashcard-back>Back</c-flashcard-back>
-        </c-flashcard>
+        <pe-flashcard clickable rotate class="animated">
+            <pe-flashcard-front>left</pe-flashcard-front>
+            <pe-flashcard-back>Back</pe-flashcard-back>
+        </pe-flashcard>
 
         <!-- Rotate Right -->
-        <c-flashcard clickable rotate="right" class="animated">
-            <c-flashcard-back>Back</c-flashcard-back>
-            <c-flashcard-front>right</c-flashcard-front>
-        </c-flashcard>
+        <pe-flashcard clickable rotate="right" class="animated">
+            <pe-flashcard-back>Back</pe-flashcard-back>
+            <pe-flashcard-front>right</pe-flashcard-front>
+        </pe-flashcard>
 
         <!-- Rotate Bottom -->
-        <c-flashcard clickable rotate="bottom" class="animated">
-            <c-flashcard-front>bottom</c-flashcard-front>
-            <c-flashcard-back>Back</c-flashcard-back>
-        </c-flashcard>
+        <pe-flashcard clickable rotate="bottom" class="animated">
+            <pe-flashcard-front>bottom</pe-flashcard-front>
+            <pe-flashcard-back>Back</pe-flashcard-back>
+        </pe-flashcard>
 
         <!-- Rotate Right -->
-        <c-flashcard clickable rotate="top" class="animated">
-            <c-flashcard-front>up</c-flashcard-front>
-            <c-flashcard-back>Back</c-flashcard-back>
-        </c-flashcard>
+        <pe-flashcard clickable rotate="top" class="animated">
+            <pe-flashcard-front>up</pe-flashcard-front>
+            <pe-flashcard-back>Back</pe-flashcard-back>
+        </pe-flashcard>
     </main>
 
     <script src="main.js"></script>
