@@ -10,17 +10,17 @@ pe-flashcard-back {
     backface-visibility: hidden;
 }
 
+pe-flashcard-front {
+    z-index: 2;
+}
+
+pe-flashcard-back {
+    z-index: 1;
+}
+
 pe-flashcard:not([rotate]):not([no-effect]) {
-    pe-flashcard-back {
-        display: none;
-    }
-    
     &[flipped] pe-flashcard-front {
-        display: none;
-    }
-    
-    &[flipped] pe-flashcard-back {
-        display: inherit;
+        opacity: 0;
     }
 }
 

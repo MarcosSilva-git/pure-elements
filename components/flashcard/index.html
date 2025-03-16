@@ -11,7 +11,8 @@
             justify-content: space-around;
             align-items: center;
             flex-wrap: wrap;
-            background-color: rgb(59, 59, 59);
+            /* background-color: rgb(59, 59, 59); */
+            background-color: red;
         }
 
         pe-flashcard {
@@ -34,14 +35,14 @@
 
         .animated {
             perspective: 1000px;
-            transition: transform .3s;
+            transition: all .7s ease-out;
         }
     </style>
 </head>
 <body>
     <main>
         <!-- SImple use -->
-        <pe-flashcard clickable>
+        <pe-flashcard clickable class="animated">
             <pe-flashcard-front>SImple use</pe-flashcard-front>
             <pe-flashcard-back>Back</pe-flashcard-back>
         </pe-flashcard>
