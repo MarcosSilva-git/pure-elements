@@ -16,31 +16,54 @@
         <c-flashcard-back>Back</c-flashcard-back>
     </c-flashcard>
 
-    <!-- Animatated -->
-    <c-flashcard clickable rotate class="animated">
-        <c-flashcard-front>Rotate Right</c-flashcard-front>
-        <c-flashcard-back>Back</c-flashcard-back>
-    </c-flashcard>
-
+    
     <!-- Not Clicable -->
     <c-flashcard style="cursor: initial;">
         <c-flashcard-front>Not Clicable</c-flashcard-front>
         <c-flashcard-back>Back</c-flashcard-back>
     </c-flashcard>
 
+
+
+     <!-- Rotate Left -->
+     <c-flashcard clickable rotate class="animated">
+        <c-flashcard-front>left</c-flashcard-front>
+        <c-flashcard-back>Back</c-flashcard-back>
+    </c-flashcard>
+
+    <!-- Rotate Right -->
+    <c-flashcard clickable rotate="right" class="animated">
+        <c-flashcard-front>right</c-flashcard-front>
+        <c-flashcard-back>Back</c-flashcard-back>
+    </c-flashcard>
+
+    <!-- Rotate Bottom -->
+    <c-flashcard clickable rotate="bottom" class="animated">
+        <c-flashcard-front>bottom</c-flashcard-front>
+        <c-flashcard-back>Back</c-flashcard-back>
+    </c-flashcard>
+
+    <!-- Rotate Right -->
+    <c-flashcard clickable rotate="top" class="animated">
+        <c-flashcard-front>up</c-flashcard-front>
+        <c-flashcard-back>Back</c-flashcard-back>
+    </c-flashcard>
+
+
+
     <script src="main.js"></script>
 
 <style>
     body {
+        box-sizing: border-box;
         width: 100vw;
         height: 100vh;
         margin: 0;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
-        gap: 5rem;
-        background-color: rgb(59, 59, 59);
         flex-wrap: wrap;
+        background-color: rgb(59, 59, 59);
     }
 
     c-flashcard {
@@ -58,7 +81,7 @@
     }
     
     c-flashcard-back {
-        background-color: rgb(179, 179, 179);
+        background-color: #b3b3b3;
     }
 
     .animated {

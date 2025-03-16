@@ -1,14 +1,6 @@
 c-flashcard {
-    --front-rotate-angle: 180deg;
-    --back-rotate-angle: -180deg;
-
     display: block;
     position: relative;
-}
-
-c-flashcard[rotate="right"] {
-    --front-rotate-angle: -180deg;
-    --back-rotate-angle: 180deg;
 }
 
 c-flashcard-front,
@@ -18,32 +10,58 @@ c-flashcard-back {
     backface-visibility: hidden;
 }
 
-
-
-/* if just can flip and cannot rotate */
-c-flashcard:not([rotate]) c-flashcard-back {
-    display: none;
+c-flashcard:not([rotate]) {
+    c-flashcard-back {
+        display: none;
+    }
+    
+    &[flipped] c-flashcard-front {
+        display: none;
+    }
+    
+    &[flipped] c-flashcard-back {
+        display: inherit;
+    }
 }
 
-c-flashcard[flipped]:not([rotate]) c-flashcard-front {
-    display: none;
-}
 
-c-flashcard[flipped]:not([rotate]) c-flashcard-back {
-    display: inherit;
-}
+c-flashcard[rotate] {
+    --front-rotate-y: 0;
+    --front-rotate-x: 0;
 
+    --back-rotate-y: 0;
+    --back-rotate-x: 0;
 
+    &:not([rotate="right"]):not([rotate="top"]):not([rotate="bottom"]),
+    &[rotate="left"] { 
+        --front-rotate-y: 180deg;
+        --back-rotate-y: -180deg;
+    }
 
-/* if can rotate */
-c-flashcard[rotate] c-flashcard-back {
-    transform: rotateY(var(--back-rotate-angle));
-}
+    &[rotate="right"] {
+        --front-rotate-y: -180deg;
+        --back-rotate-y: 180deg;
+    }
 
-c-flashcard[rotate][flipped] c-flashcard-back {
-    transform: rotateY(0deg);
-}
+    &[rotate="top"] {
+        --front-rotate-x: -180deg;
+        --back-rotate-x: 180deg;
+    }
 
-c-flashcard[rotate][flipped] c-flashcard-front {
-    transform: rotateY(var(--front-rotate-angle));
+    &[rotate="bottom"] {
+        --front-rotate-x: 180deg;
+        --back-rotate-x: -180deg;
+    }
+
+    c-flashcard-back {
+        transform: rotateX(var(--back-rotate-x)) rotateY(var(--back-rotate-y));
+    }
+    
+    &[flipped] c-flashcard-back {
+        transform: rotateX(0) rotateY(0);
+    }
+    
+    &[flipped] c-flashcard-front {
+        transform: rotateX(var(--front-rotate-x)) rotateY(var(--front-rotate-y));
+    }
 }
