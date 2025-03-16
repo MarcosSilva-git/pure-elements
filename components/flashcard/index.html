@@ -1,94 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head></head>
-<body>
+<head>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body { margin: 0;}
 
-    <!-- SImple use -->
-    <c-flashcard clickable>
-        <c-flashcard-front>SImple use</c-flashcard-front>
-        <c-flashcard-back>Back</c-flashcard-back>
-    </c-flashcard>
+        main {
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: rgb(59, 59, 59);
+        }
 
-    <!-- Starts flipped -->
-    <c-flashcard clickable flipped>
-        <c-flashcard-front>Starts flipped</c-flashcard-front>
-        <c-flashcard-back>Back</c-flashcard-back>
-    </c-flashcard>
+        c-flashcard {
+            width: 150px;
+            height: 200px;
+            border-radius: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        c-flashcard-front {
+            background-color: white;
+        }
+        
+        c-flashcard-back {
+            background-color: #b3b3b3;
+        }
 
-    
-    <!-- Not Clicable -->
-    <c-flashcard style="cursor: initial;">
-        <c-flashcard-front>Not Clicable</c-flashcard-front>
-        <c-flashcard-back>Back</c-flashcard-back>
-    </c-flashcard>
+        .animated {
+            perspective: 1000px;
+            transition: transform .3s;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- SImple use -->
+        <c-flashcard clickable>
+            <c-flashcard-front>SImple use</c-flashcard-front>
+            <c-flashcard-back>Back</c-flashcard-back>
+        </c-flashcard>
 
+        <!-- Starts flipped -->
+        <c-flashcard clickable flipped>
+            <c-flashcard-front>Starts flipped</c-flashcard-front>
+            <c-flashcard-back>Back</c-flashcard-back>
+        </c-flashcard>
 
+        
+        <!-- Not Clicable -->
+        <c-flashcard style="cursor: initial;">
+            <c-flashcard-front>Not Clicable</c-flashcard-front>
+            <c-flashcard-back>Back</c-flashcard-back>
+        </c-flashcard>
 
-     <!-- Rotate Left -->
-     <c-flashcard clickable rotate class="animated">
-        <c-flashcard-front>left</c-flashcard-front>
-        <c-flashcard-back>Back</c-flashcard-back>
-    </c-flashcard>
+        <!-- Rotate Left -->
+        <c-flashcard clickable rotate class="animated">
+            <c-flashcard-front>left</c-flashcard-front>
+            <c-flashcard-back>Back</c-flashcard-back>
+        </c-flashcard>
 
-    <!-- Rotate Right -->
-    <c-flashcard clickable rotate="right" class="animated">
-        <c-flashcard-front>right</c-flashcard-front>
-        <c-flashcard-back>Back</c-flashcard-back>
-    </c-flashcard>
+        <!-- Rotate Right -->
+        <c-flashcard clickable class="animated">
+            <c-flashcard-back>Back</c-flashcard-back>
+            <c-flashcard-front>right</c-flashcard-front>
+        </c-flashcard>
 
-    <!-- Rotate Bottom -->
-    <c-flashcard clickable rotate="bottom" class="animated">
-        <c-flashcard-front>bottom</c-flashcard-front>
-        <c-flashcard-back>Back</c-flashcard-back>
-    </c-flashcard>
+        <!-- Rotate Bottom -->
+        <c-flashcard clickable rotate="bottom" class="animated">
+            <c-flashcard-front>bottom</c-flashcard-front>
+            <c-flashcard-back>Back</c-flashcard-back>
+        </c-flashcard>
 
-    <!-- Rotate Right -->
-    <c-flashcard clickable rotate="top" class="animated">
-        <c-flashcard-front>up</c-flashcard-front>
-        <c-flashcard-back>Back</c-flashcard-back>
-    </c-flashcard>
-
-
+        <!-- Rotate Right -->
+        <c-flashcard clickable rotate="top" class="animated">
+            <c-flashcard-front>up</c-flashcard-front>
+            <c-flashcard-back>Back</c-flashcard-back>
+        </c-flashcard>
+    </main>
 
     <script src="main.js"></script>
-
-<style>
-    body {
-        box-sizing: border-box;
-        width: 100vw;
-        height: 100vh;
-        margin: 0;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        background-color: rgb(59, 59, 59);
-    }
-
-    c-flashcard {
-        width: 150px;
-        height: 200px;
-        border-radius: 1rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-    }
-    
-    c-flashcard-front {
-        background-color: white;
-    }
-    
-    c-flashcard-back {
-        background-color: #b3b3b3;
-    }
-
-    .animated {
-        perspective: 1000px;
-        transition: transform 1s;
-    }
-</style>
-
 </body>
 </html>
