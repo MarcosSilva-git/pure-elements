@@ -34,23 +34,23 @@ c-flashcard[rotate]:not([no-effect]) {
 
     &:not([rotate="right"]):not([rotate="top"]):not([rotate="bottom"]),
     &[rotate="left"] { 
-        --front-rotate-y: 180deg;
-        --back-rotate-y: -180deg;
+        --front-rotate-y: .5turn;
+        --back-rotate-y: -.5turn;
     }
 
     &[rotate="right"] {
-        --front-rotate-y: -180deg;
-        --back-rotate-y: 180deg;
+        --front-rotate-y: -.5turn;
+        --back-rotate-y: .5turn;
     }
 
     &[rotate="top"] {
-        --front-rotate-x: -180deg;
-        --back-rotate-x: 180deg;
+        --front-rotate-x: -.5turn;
+        --back-rotate-x: .5turn;
     }
 
     &[rotate="bottom"] {
-        --front-rotate-x: 180deg;
-        --back-rotate-x: -180deg;
+        --front-rotate-x: .5turn;
+        --back-rotate-x: -.5turn;
     }
 
     c-flashcard-back {
