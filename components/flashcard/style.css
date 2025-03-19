@@ -18,36 +18,46 @@ pe-flashcard-back {
     z-index: 1;
 }
 
-pe-flashcard:not([rotate]):not([no-effect]) {
+pe-flashcard:not([effect]),
+pe-flashcard[effect=""],
+pe-flashcard[effect="none"] {
+    &[flipped] pe-flashcard-front {
+        display: none;
+    }   
+}
+
+pe-flashcard[effect="fade"] {
     &[flipped] pe-flashcard-front {
         opacity: 0;
     }
 }
 
-pe-flashcard[rotate]:not([no-effect]) {
+pe-flashcard[effect="rotate-left"],
+pe-flashcard[effect="rotate-right"],
+pe-flashcard[effect="rotate-top"],
+pe-flashcard[effect="rotate-bottom"]  {
     --front-rotate-y: 0;
     --front-rotate-x: 0;
 
     --back-rotate-y: 0;
     --back-rotate-x: 0;
 
-    &:not([rotate="right"]):not([rotate="top"]):not([rotate="bottom"]),
-    &[rotate="left"] { 
+    &[effect="rotate-left"] { 
         --front-rotate-y: .5turn;
         --back-rotate-y: -.5turn;
     }
 
-    &[rotate="right"] {
+    &[effect="rotate-right"] {
         --front-rotate-y: -.5turn;
         --back-rotate-y: .5turn;
     }
 
-    &[rotate="top"] {
+    &[effect="rotate-top"] {
         --front-rotate-x: -.5turn;
         --back-rotate-x: .5turn;
     }
 
-    &[rotate="bottom"] {
+    &[effect="rotate-bottom"] {
         --front-rotate-x: .5turn;
         --back-rotate-x: -.5turn;
     }
